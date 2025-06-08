@@ -194,4 +194,14 @@ h1 {
     p {
       font-size: 1em;
     }
+  
+   .logo-line{
+  height: 2px;
+  background-color: #da6f19;
+  border: none;
+  width: 100%;
+  max-width: 200px; 
+  margin: 20px auto;
+  }
+  
   }
