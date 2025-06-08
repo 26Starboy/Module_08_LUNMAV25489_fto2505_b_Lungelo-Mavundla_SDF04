@@ -26,182 +26,190 @@ img {
 }
 
 .newsletter {
-  flex-shrink: 0;    
+  flex-shrink: 0;    /* doesnt allow this box to shrink when there is not enough space.*/
 }
+
 .Technologies {
-  margin-right: auto;
+  margin-right: auto; /* this controls the space on the rigt side of the element and then auto takes up all the leftover space on the otherside.*/
 }
+
 .links {
-  margin-right: auto;
+  margin-right: auto; /* Push this element to the left by using all the extra space on the right side.*/ /*“Push me to the left side”.*/
 }
 
 .flex {
-  display: flex;
-}
+  display: flex; /*This turns the element into a Flexbox container, which helps you control how items inside it are arranged.*/
+ }
+
 .content-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 70px;
-  align-items: baseline;
+  display: flex;                  /*Turns the container into a Flexbox, making it easy to arrange items in a row or in columns, with automatic spacing and alignment.*/
+  justify-content: space-between; /*Spread the items horizontally with equal space between them.*/
+  flex-wrap: wrap;                /*If there isn’t enough space in one row, let the items move to the next line.*/
+  gap: 70px;                      /*Put 70 pixels of space between each item — both side to side and top to bottom.*/
+  align-items: baseline;          /*Line up the items by their text baseline (the bottom line where text sits).*/
 }
 
-.subscribe-btn:hover {
-  font-size: large;
-  cursor: pointer;
+.subscribe-btn:hover { 
+  font-size: large; /*Make the text larger when the user hovers over the button.*/
+  cursor: pointer;  /*Change the mouse cursor to a hand pointer when hovering over the button.*/
 }
 
-.subscribe-btn:focus {
-  border: 2px solid #fff;
+.subscribe-btn:focus {      /*	Targets focused buttons with that class.*/
+  border: 2px solid #fff; /* Draw a solid white border, 2px thick.*/
 }
 
-.links p {
-  white-space: nowrap;
+.links p {             /*Style the <p> inside .links.*/
+  white-space: nowrap; /*Don’t let the text wrap to the next line — keep it all on one line no matter how long it is.*/
 }
 
-a {
-  color: #313131;
-  text-decoration: none;
+a {                      /*Targets all <a> tags (links).*/
+  color: #313131;      /*Changes link color to dark gray.*/
+  text-decoration: none; /*Removes underline.*/
 }
 
-a:hover {
-  color: #fff;
-}
-a:active {
-  color: #da6f19;
-}
-a:focus {
-  color: #fff;
+a:hover {        /*Activates style when mouse hovers on link.*/
+  color: #fff; /*changes text color to white.*/
 }
 
-hr {
-  height: 1px;
-  background: #da6f19;
-  border: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
+a:active {          /*Style applied while link is being clicked.*/
+  color: #da6f19; /*	Changes text color to orange.*/
+}
+a:focus {        /*Styles link when it’s focused.*/
+  color: #fff; /*Changes text color to white.*/
 }
 
-.email-input {
-  border-radius: 5px;
-  border: none;
-  padding: 9px 20px;
-  font-size: 1em;
-  margin-right: 10px;
-  margin-bottom: 15px;
+hr {                     /*The <hr> tag in HTML creates a horizontal line (a divider) on the page.*/
+  height: 1px;           /*Makes the line very thin (1 pixel).*/
+  background: #da6f19; /*Colors the line orange.*/
+  border: none;          /*Removes any border around the line.*/  
+  margin-top: 20px;      /*	Adds space above the line.*/
+  margin-bottom: 20px;   /*Add some empty space below the line.*/
 }
 
-.subscribe-btn {
-  border-radius: 5px;
-  border: none;
-  padding: 9px 20px;
-  background-color: #da6f19;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-}
-h1 {
-  font-size: 1.6em;
+.email-input {        /*This targets any HTML element with the class name email-input*/
+  border-radius: 5px; /*Rounds the corners.*/
+  border: none;       /*Removes the border.*/
+  padding: 9px 20px;  /*Adds space inside the input.*/
+  font-size: 1em;     /*Sets the text size.*/
+  margin-right: 10px; /*Adds space to the right of the input.*/
+  margin-bottom: 15px; /*Give breathing room under the box.*/
 }
 
-    p {
-      font-size: 1em;
+.subscribe-btn {               /*This styles any HTML element with the class .subscribe-btn*/
+  border-radius: 5px;          /*Make the button look smooth.*/
+  border: none;                /*No outline or border on the button.*/
+  padding: 9px 20px;           /*Make the button bigger and comfier.*/
+  background-color: #da6f19; /*Colors the button background orange.*/
+  color: white;              /*Sets the text color to white making it readable on orange.*/
+  font-weight: bold;           /*Make the word ‘Subscribe’ stand out.*/
+  font-size: 1em;              /*Use regular-sized text.*/
+}
+
+h1 {                /*Targets all <h1> headings.*/   /*Style the big page title.*/
+  font-size: 1.6em; /*Makes the heading 1.6em normal size.*/
+}
+
+    p {               /*Targets all paragraphs (<p>).*/ /*This will style regular text blocks*/
+      font-size: 1em; /*Sets the text size to normal.*/
     }
   
 
-.Heading {
-  font-weight: bold;
-  margin-bottom: 20px;
+.Heading {             /*Targets the element with the .Heading class.*/
+  font-weight: bold;   /*Makes text bold/thicker.*/
+  margin-bottom: 20px; /*Makes text bold/thicker.*/
 }
 
-@media (min-width: 959px) {
-  .content-container {
-    flex-wrap: nowrap;
-    flex-shrink: 1;
-    gap: 45px;
+@media (min-width: 959px) { /*Only apply styles on big screens.*/
+  .content-container {      /*Apply these styles to a layout container.*/
+    flex-wrap: nowrap;      /*Keep all items in one line.*/
+    flex-shrink: 1;         /*If space is tight, items can shrink*/
+    gap: 45px;              /*Add spacing between items.*/
   }
 }
 
-@media (max-width: 800px) {
-  .content-container {
-    flex-wrap: wrap;
-    gap: 70px;
-  }
-  .newsletter {
-    flex-shrink: 1;
+@media (max-width: 800px) { /*Applies styles only on small screens.*/
+  .content-container {      /*Apply these styles to a layout container.*/
+    flex-wrap: wrap;        /*Let items go to next row if needed.*/
+    gap: 70px;              /*Keep items nicely spaced apart.*/
   }
 
+  .newsletter {     /*Styles the email signup section.*/
+    flex-shrink: 1; /*Let it get smaller to fit on the screen.*/
+  }
+
+  .container {         /*Styles the main wrapper box.*/
+    margin: 50px 60px; /*Give it 50px top/bottom & 60px left/right space.*/
+  }
+}
+
+@media (max-width: 600px) { /*Do this on phones or small tablet.*/
+  .container {              /*Style this main box.*/
+    margin: 50px 30px;      /*Put 50px above/below and 30px on the sides*/
+  }
+
+  .newsletter {             /*Targets any HTML element with the class name newsletter.*/
+    display: flex;          /*Controls the layout of the inside stuff.*/
+    flex-direction: column; /*Stack items from top to bottom.*/
+    justify-content: center; /*Center items vertically inside the box.*/
+  }
+
+  .email-input,             /*Apply the styles inside these curly braces {} to both the .email-input and .subscribe-btn elements.*/
+  .subscribe-btn {          
+    flex: 1;                /*tells the element to take up equally space as your siblings in a row.*/
+    min-width: 0;           /*This prevents the element from being wider than it should be.*/
+    padding: 9px 20px;      /*This is the space inside the element between its content and border.*/ /*t&b9px; l&r.*/
+    font-size: 1em;         /*Sets the text size inside the element.1em means "same size as the parent element’s font.*/
+    box-sizing: border-box; /*Controls how the box is sized.*/
+    margin: 0;              /*It removes all that space.*/
+    margin-bottom: 10px;    /*Adds space below an element.*/
+  }
+  
+  h1 {                /*Targets the main heading.*/
+    font-size: 1.3em; /*Makes text 30% bigger.*/
+  }
+}
+
+@media (max-width: 400px) { /*When the screen is really small  400 pixels  apply this special style to .container.*/
   .container {
-    margin: 50px 60px;
+    margin: 50px 20px;      /*This adds space outside the container, 50px t&p, 20px l&r*/
   }
-  h1 {
-    font-size: 1.3em;
-  }
-}
 
-@media (max-width: 600px) {
-  .container {
-    margin: 50px 30px;
+  .content-container {      /*This targets an HTML element with the class name content-container.*/
+    gap: 10px;              /*Leave 10px of room between the stuff inside.*/
+    flex-direction: column; /*Stacks items vertically.*/
   }
-  .newsletter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+  .newsletter {             /*Newsletter is a class name used in HTML and CSS to identify a group or box of stuff related to a newsletter.*/
+    display: flex;          /*This makes the .newsletter box a flex container.*/
+    flex-direction: column; /*This stacks all the items inside the .newsletter box vertically (one on top of the other).*/
+    justify-content: center;/*This centers all the items up and down inside the .newsletter container.*/
   }
+
   .email-input,
-  .subscribe-btn {
-    flex: 1;
-    min-width: 0;
-    padding: 9px 20px;
-    font-size: 1em;
-    box-sizing: border-box;
-    margin: 0;
-    margin-bottom: 10px;
+  .subscribe-btn {         /*This styles two elements:.email-input (an email box).subscribe-btn (the subscribe button)*/
+    flex: 1;               /*This makes both the email input and button flexible.*/
+    min-width: 0;          /*If space is tight, allow this element to shrink as small as needed.*/
+    padding: 9px 10px;     /*Adds space inside the element between the border and the text; t&p9px and l&r10px*/
+    font-size: 1em;        /*1em means “normal” or “default” size (usually 16px) so it sets the text size*/
+    box-sizing: border-box;/*Makes sizing more predictable. Keeps things from growing too wide.*/
+    margin: 0;             /*Removes all default space outside the element.*/
+    margin-bottom: 10px;   /*Adds 10px of space below each item.*/
   }
-  h1 {
-    font-size: 1.3em;
+
+    h1 {                /*main heading.*/
+      font-size: 1.3em; /*Make it 30% bigger.*/
+    }
+    p {               /*Paragraph text.*/
+      font-size: 1em; /*Keep it normal size (16px).*/
+    }
+
+  .logo-line{                  /*A small line or bar (like a decorative divider) under a logo or heading.*/
+  height: 2px;                 /*Make the line 2 pixels tall.*/
+  background-color: #da6f19; /*Give the line an orange color.*/
+  border: none;                /*This makes sure the line is just the color you picked, not a browser-styled border.*/
+  width: 100%;                 /*Make the line take up 100% of the container's width.*/
+  max-width: 200px;            /*But don't let it get wider than 200 pixels."So, the line will stretch across, but only up to 200px max.*/
+  margin: 20px auto;           /*20px = space above and below the line; auto- center the line horizontally.*/
   }
+  
 }
-
-@media (max-width: 400px) {
-  .container {
-    margin: 50px 20px;
-  }
-  .content-container {
-    gap: 10px;
-    flex-direction: column;
-  }
-  .newsletter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .email-input,
-  .subscribe-btn {
-    flex: 1;
-    min-width: 0;
-    padding: 9px 10px;
-    font-size: 1em;
-    box-sizing: border-box;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-
-    h1 {
-      font-size: 1.3em;
-    }
-    p {
-      font-size: 1em;
-    }
-
-  .logo-line{
-  height: 2px;
-  background-color: #da6f19;
-  border: none;
-  width: 100%;
-  max-width: 200px; 
-  margin: 20px auto;
-  }
-
-  }
