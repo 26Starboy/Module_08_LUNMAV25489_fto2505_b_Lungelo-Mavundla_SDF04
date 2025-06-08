@@ -219,6 +219,5 @@ h1 {                /*Targets all <h1> headings.*/   /*Style the big page title.
   background-color: #da6f19; /*Give the line an orange color.*/
   border: none;                /*This makes sure the line is just the color you picked, not a browser-styled border.*/
   width: 100%;                 /*Make the line take up 100% of the container's width*/
-  max-width: 200px;            /*So, the line will stretch across, but only up to 200px max.*/
   margin: 20px auto;           /*20px = space above and below the line auto = center the line horizontally.*/
 }
