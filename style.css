@@ -1,28 +1,28 @@
 body{
-  max-inline-size: 100vw;
-  max-block-size: 100%;
-  margin: auto 50px;
+  max-inline-size: 100vw;  /* this keeps the width in point and not letting it go past a certain point.*/
+  max-block-size: 100%;    /* this controls the vertical size (top to bottom.*/
+  margin: auto 50px;       /*this adds 50pixels of space on the left and right sides of the body.*/
 }
 
 footer {
-  background-color: #659f8f;
-  color: #313131;
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
+  background-color: #659f8f; /* this applies solid colors as background on an element.*/
+  color: #313131;            /* this adds the text-color, a very dark grey.*/
+  max-width: 100%;             /* the footer is not allowed to be wider than the full page.*/
+  max-height: 100%;            /* footer is not allowed to be taller than 100% of its parent/container.*/
+  border-radius: 10px;         /* it gives the corners of the footer curves so they not sharp and square.*/
 }
 
 img {
-  inline-size: auto;
-  block-size: 21px;
-  padding-bottom: 50px;
+  inline-size: auto;    /* it keeps the width of the image automatetic the browser will decide how wide it should be.*/
+  block-size: 21px;     /* set the height of the image to 21 pixels which is small.*/
+  padding-bottom: 50px; /* adds 50pixels of empty space below the image.*/
 }
 
 .container {
-  padding: 12px 6px;
-  display: flex;
-  flex-direction: column;
-  margin: 100px 120px;
+  padding: 12px 6px;      /* adds space inside the box, between the content and the border.*/
+  display: flex;          /* turn this container into a flexbox, which is a special layout system to organize items inside.*/
+  flex-direction: column; /* stack the items vertically, like a column one on top of the other.*/
+  margin: 100px 120px;    /* adds space outside the box, 100px(top&bottom) and 12px(left&right.*/
 }
 
 .newsletter {
@@ -194,4 +194,14 @@ h1 {
     p {
       font-size: 1em;
     }
+
+  .logo-line{
+  height: 2px;
+  background-color: #da6f19;
+  border: none;
+  width: 100%;
+  max-width: 200px; 
+  margin: 20px auto;
+  }
+
   }
